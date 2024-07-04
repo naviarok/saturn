@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Page title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,500;1,600;1,700&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/tailwind/tailwind.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="shuffle-for-tailwind.png">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js" defer></script>
+    <style>html {
+      scroll-behavior: smooth;
+    }</style>
+</head>
+<body class="antialiased bg-body text-body font-body">
+    <div class="">
+                
+      <div>
+        <div>
+          <div>
+            <section x-data="{ mobileNavOpen: false }" class="relative pb-24 bg-gray-900 overflow-hidden">
+              <nav class="relative py-6 mb-20 sm:mb-32 bg-white">
+                <div class="container px-4 mx-auto">
+                  <div class="flex items-center">
+                    <a class="inline-block text-lg font-bold" href="#">
+                      <img class="h-10" src="saturn-assets/logos/logo-saturn-dark.svg" alt="" width="auto">
+                    </a>
+                    <div class="lg:hidden ml-auto">
+                      <button x-on:click="mobileNavOpen = !mobileNavOpen" class="flex w-12 h-12 items-center justify-center bg-gray-100 hover:bg-gray-200 rounded-md transition duration-200">
+                        <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M3 12H21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                          <path d="M3 6H21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                          <path d="M3 18H21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </button>
+                    </div>
+                    <ul class="hidden lg:flex ml-14 lg:w-auto lg:space-x-12">
+                      <li><a class="inline-block text-sm text-gray-900 hover:text-orange-900 font-medium" href="#">Home</a></li>
+                      <li class="group relative">
+                        <a class="inline-block text-sm text-gray-900 hover:text-orange-900 font-medium" href="#">Services</a>
+                        <div class="hidden group-hover:block absolute top-full left-0 min-w-max max-w-xs p-4 z-30">
+                          <div class="-mb-2 ml-8 w-4 h-4 rounded-sm bg-white border-l border-t border-gray-200 transform rotate-45"></div>
+                          <div class="w-full max-w-xs bg-white border border-gray-100 rounded-3xl pt-4 pb-4 px-4">
+                            <div class=" border-gray-100">
+                              <a class="flex mb-2 items-center py-3 px-4 text-sm text-gray-900 hover:bg-orange-50 rounded-lg" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewbox="0 0 16 16">
+                                  <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"></path>
+                                </svg>
+                                <span class="ml-3">Residential cleaning</span>
+                              </a>
+                              <a class="flex mb-2 items-center py-3 px-4 text-sm text-gray-900 hover:bg-orange-50 rounded-lg" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-briefcase" viewbox="0 0 16 16">
+                                  <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5m1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0M1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5"></path>
+                                </svg>
+                                <span class="ml-3">Commercial cleaning</span>
+                              </a>
+                              <a class="flex mb-2 items-center py-3 px-4 text-sm text-gray-900 hover:bg-orange-50 rounded-lg" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cone-striped" viewbox="0 0 16 16">
+                                  <path d="m9.97 4.88.953 3.811C10.159 8.878 9.14 9 8 9s-2.158-.122-2.923-.309L6.03 4.88C6.635 4.957 7.3 5 8 5s1.365-.043 1.97-.12m-.245-.978L8.97.88C8.718-.13 7.282-.13 7.03.88L6.275 3.9C6.8 3.965 7.382 4 8 4s1.2-.036 1.725-.098m4.396 8.613a.5.5 0 0 1 .037.96l-6 2a.5.5 0 0 1-.316 0l-6-2a.5.5 0 0 1 .037-.96l2.391-.598.565-2.257c.862.212 1.964.339 3.165.339s2.303-.127 3.165-.339l.565 2.257z"></path>
+                                </svg>
+                                <span class="ml-3">Construction cleaning</span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li><a class="inline-block text-sm text-gray-900 hover:text-orange-900 font-medium" href="#contact">Contact us</a></li>
+                    </ul>
+                    <div class="hidden lg:block ml-auto">
+                      <div class="flex items-center">
+                        <a class="inline-block mr-9 text-sm font-semibold text-orange-900 hover:text-gray-900 removed" href="#"></a><a class="inline-block mr-9 text-sm font-semibold text-orange-900 hover:text-gray-900" href="#">+1234-567890</a>
+                        <a class="relative group inline-block py-3 px-4 text-sm font-semibold text-orange-900 hover:text-white border border-gray-200 rounded-md overflow-hidden transition duration-300" href="#">
+                          <div class="absolute top-0 right-full w-full h-full bg-orange-900 transform group-hover:translate-x-full group-hover:scale-102 transition duration-500"></div>
+                          <span class="relative">Get a Free Quote</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+              <div class="relative">
+                <img class="absolute top-0 right-0 mt-32 lg:-mt-10" src="saturn-assets/images/headers/star-dark-right.svg" alt="">
+                <div class="relative container px-4 mx-auto">
+                  <div class="max-w-3xl">
+                    <div class="pl-8 md:pl-12 lg:pl-24 border-l-2 border-gray-700 mb-16">
+                      <h1 class="font-heading text-4xl xs:text-6xl md:text-8xl xl:text-10xl font-bold text-white mb-8 sm:mb-14">
+                        <span>World's Best Cleaning Team</span>
+                        <span class="font-serif italic">Ever</span>
+                      </h1>
+                    </div>
+                    <div class="lg:flex mb-20 items-center justify-between">
+                      <div class="max-w-md mb-12 lg:mb-0 lg:mr-8">
+                        <p class="text-xl font-semibold text-gray-300">We provide top-quality cleaning services all over Spain. Our experienced team uses the best tools and eco-friendly products to make your home or office spotless and healthy.</p>
+                      </div>
+                      <div>
+                        <div>
+                          <a class="relative group inline-block w-full sm:w-auto py-4 px-6 text-orange-50 font-semibold bg-blue-800 rounded-md overflow-hidden" href="#">
+                            <div class="absolute top-0 right-full w-full h-full bg-orange-900 transform group-hover:translate-x-full group-hover:scale-102 transition duration-500"></div>
+                            <div class="relative flex items-center justify-center">
+                              <span class="mr-4">Get a Free Quote</span>
+                              <span>
+                                <svg width="8" height="12" viewbox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M6.83 5.29L2.59 1.05C2.49704 0.956274 2.38644 0.881879 2.26458 0.83111C2.14272 0.780342 2.01202 0.754204 1.88 0.754204C1.74799 0.754204 1.61729 0.780342 1.49543 0.83111C1.37357 0.881879 1.26297 0.956274 1.17 1.05C0.983753 1.23736 0.879211 1.49082 0.879211 1.755C0.879211 2.01919 0.983753 2.27264 1.17 2.46L4.71 6L1.17 9.54C0.983753 9.72736 0.879211 9.98082 0.879211 10.245C0.879211 10.5092 0.983753 10.7626 1.17 10.95C1.26344 11.0427 1.37426 11.116 1.4961 11.1658C1.61794 11.2155 1.7484 11.2408 1.88 11.24C2.01161 11.2408 2.14207 11.2155 2.26391 11.1658C2.38575 11.116 2.49656 11.0427 2.59 10.95L6.83 6.71C6.92373 6.61704 6.99813 6.50644 7.04889 6.38458C7.09966 6.26272 7.1258 6.13201 7.1258 6C7.1258 5.86799 7.09966 5.73728 7.04889 5.61543C6.99813 5.49357 6.92373 5.38297 6.83 5.29Z" fill="#FFF2EE"></path>
+                                </svg>
+                              </span>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div :class="{'block': mobileNavOpen, 'hidden': !mobileNavOpen}" class="fixed top-0 left-0 bottom-0 w-5/6 max-w-md z-50 block">
+                <div x-on:click="mobileNavOpen = !mobileNavOpen" class="fixed inset-0 bg-gray-800 opacity-25"></div>
+                <nav class="relative flex flex-col py-6 px-10 w-full h-full bg-white border-r overflow-y-auto">
+                  <div class="flex items-center mb-16">
+                    <a class="mr-auto text-2xl font-medium leading-none" href="#">
+                      <img class="h-10" src="saturn-assets/logos/logo-saturn-dark.svg" alt="" width="auto">
+                    </a>
+                    <button x-on:click="mobileNavOpen = !mobileNavOpen">
+                      <svg class="h-6 w-6 text-gray-500 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                      </svg>
+                    </button>
+                  </div>
+                  <div>
+                    <ul class="mb-2">
+                      <li><a class="block py-4 px-5 text-gray-900 hover:bg-orange-50 rounded-lg" href="#">Home</a></li>
+                      <li><a class="block py-4 px-5 text-gray-900 hover:bg-orange-50 rounded-lg" href="#">Services</a></li>
+                      <li><a class="block py-4 px-5 text-gray-900 hover:bg-orange-50 rounded-lg" href="#contact">Contact us</a></li>
+                    </ul>
+                    <div class="py-8 px-6 mb-6 border-t border-b border-gray-200">
+                      <a class="flex items-center text-sm font-semibold text-orange-900 hover:text-orange-600" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewbox="0 0 16 16">
+                          <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"></path>
+                        </svg>
+                        <span class="ml-3">+1234-567890</span>
+                      </a>
+                    </div>
+                    <div class="flex px-6 mb-16 items-center"><a class="inline-block py-3 px-4 text-sm font-semibold text-orange-900 hover:text-white border border-gray-300 hover:border-orange-600 hover:bg-orange-900 rounded-md transition duration-200" href="#">Get a Free Quote</a></div>
+                  </div>
+                </nav>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+                
+      <div>
+        <div>
+          <section class="relative pt-20 pb-20 lg:pb-32 overflow-hidden ">
+            <img class="absolute top-0 right-0" src="saturn-assets/images/features/star-element-right.png" alt="">
+            <div class="relative container px-4 mx-auto">
+              <div class="max-w-md lg:max-w-7xl mx-auto">
+                <div class="flex flex-wrap -mx-4 mb-18 items-center">
+                  <div class="w-full lg:w-2/3 xl:w-1/2 px-4 mb-12 lg:mb-0">
+                    <div class="max-w-lg">
+                      <span class="inline-block py-1 px-3 mb-4 text-xs font-semibold text-orange-900 bg-orange-50 rounded-full">Services</span>
+                      <h1 class="font-heading text-5xl xs:text-6xl md:text-7xl font-bold text-gray-900">
+                        <span>Delivering Best</span>
+                        <span class="font-serif italic">Cleaning services</span>
+                      </h1>
+                    </div>
+                  </div>
+                  <div class="w-full lg:w-1/3 xl:w-1/2 px-4">
+                    <div class="max-w-lg lg:ml-auto">
+                      <p class="text-lg text-gray-500">Whether you need residential or commercial cleaning, we guarantee excellent results every time.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-wrap -mx-4">
+                  <div class="w-full lg:w-1/3 px-4 mb-12 lg:mb-0">
+                    <div>
+                      <img class="block object-cover rounded-5xl mb-6 w-full h-100" src="images/pexels-pixabay-271624-1.jpg" alt="">
+                      <div>
+                        <h3 class="text-3xl font-semibold mb-5">Residential Cleaning</h3>
+                        <a class="inline-flex items-center justify-center w-full lg:w-auto px-5 py-3 text-sm font-semibold text-orange-900 rounded-full border border-gray-100 hover:border-orange-900 transition duration-200" href="#">
+                          <span class="mr-3">Learn More</span>
+                          <svg width="13" height="13" viewbox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.9199 0.62C12.8185 0.375651 12.6243 0.181475 12.3799 0.0799999C12.2597 0.028759 12.1306 0.00157999 11.9999 0H1.99994C1.73472 0 1.48037 0.105357 1.29283 0.292893C1.1053 0.48043 0.999939 0.734784 0.999939 1C0.999939 1.26522 1.1053 1.51957 1.29283 1.70711C1.48037 1.89464 1.73472 2 1.99994 2H9.58994L1.28994 10.29C1.19621 10.383 1.12182 10.4936 1.07105 10.6154C1.02028 10.7373 0.994141 10.868 0.994141 11C0.994141 11.132 1.02028 11.2627 1.07105 11.3846C1.12182 11.5064 1.19621 11.617 1.28994 11.71C1.3829 11.8037 1.4935 11.8781 1.61536 11.9289C1.73722 11.9797 1.86793 12.0058 1.99994 12.0058C2.13195 12.0058 2.26266 11.9797 2.38452 11.9289C2.50638 11.8781 2.61698 11.8037 2.70994 11.71L10.9999 3.41V11C10.9999 11.2652 11.1053 11.5196 11.2928 11.7071C11.4804 11.8946 11.7347 12 11.9999 12C12.2652 12 12.5195 11.8946 12.707 11.7071C12.8946 11.5196 12.9999 11.2652 12.9999 11V1C12.9984 0.869323 12.9712 0.740222 12.9199 0.62Z" fill="#FF460C"></path>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="w-full lg:w-1/3 px-4 mb-12 lg:mb-0">
+                    <div>
+                      <img class="block object-cover rounded-5xl mb-6 w-full h-100" src="images/full-shot-men-cleaning-office-3.jpg" alt="">
+                      <div>
+                        <h3 class="text-3xl font-semibold mb-5">Commercial Cleaning</h3>
+                        <a class="inline-flex items-center justify-center w-full lg:w-auto px-5 py-3 text-sm font-semibold text-orange-900 rounded-full border border-gray-100 hover:border-orange-900 transition duration-200" href="#">
+                          <span class="mr-3">Learn More</span>
+                          <svg width="13" height="13" viewbox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.9199 0.62C12.8185 0.375651 12.6243 0.181475 12.3799 0.0799999C12.2597 0.028759 12.1306 0.00157999 11.9999 0H1.99994C1.73472 0 1.48037 0.105357 1.29283 0.292893C1.1053 0.48043 0.999939 0.734784 0.999939 1C0.999939 1.26522 1.1053 1.51957 1.29283 1.70711C1.48037 1.89464 1.73472 2 1.99994 2H9.58994L1.28994 10.29C1.19621 10.383 1.12182 10.4936 1.07105 10.6154C1.02028 10.7373 0.994141 10.868 0.994141 11C0.994141 11.132 1.02028 11.2627 1.07105 11.3846C1.12182 11.5064 1.19621 11.617 1.28994 11.71C1.3829 11.8037 1.4935 11.8781 1.61536 11.9289C1.73722 11.9797 1.86793 12.0058 1.99994 12.0058C2.13195 12.0058 2.26266 11.9797 2.38452 11.9289C2.50638 11.8781 2.61698 11.8037 2.70994 11.71L10.9999 3.41V11C10.9999 11.2652 11.1053 11.5196 11.2928 11.7071C11.4804 11.8946 11.7347 12 11.9999 12C12.2652 12 12.5195 11.8946 12.707 11.7071C12.8946 11.5196 12.9999 11.2652 12.9999 11V1C12.9984 0.869323 12.9712 0.740222 12.9199 0.62Z" fill="#FF460C"></path>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="w-full lg:w-1/3 px-4">
+                    <div>
+                      <img class="block object-none  rounded-5xl mb-6 w-full h-100" src="images/portrait-engineers-work-hours-job-site-1.jpg" alt="">
+                      <div>
+                        <h3 class="text-3xl font-semibold mb-5">Construction Cleaning</h3>
+                        <a class="inline-flex items-center justify-center w-full lg:w-auto px-5 py-3 text-sm font-semibold text-orange-900 rounded-full border border-gray-100 hover:border-orange-900 transition duration-200" href="#">
+                          <span class="mr-3">Learn More</span>
+                          <svg width="13" height="13" viewbox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.9199 0.62C12.8185 0.375651 12.6243 0.181475 12.3799 0.0799999C12.2597 0.028759 12.1306 0.00157999 11.9999 0H1.99994C1.73472 0 1.48037 0.105357 1.29283 0.292893C1.1053 0.48043 0.999939 0.734784 0.999939 1C0.999939 1.26522 1.1053 1.51957 1.29283 1.70711C1.48037 1.89464 1.73472 2 1.99994 2H9.58994L1.28994 10.29C1.19621 10.383 1.12182 10.4936 1.07105 10.6154C1.02028 10.7373 0.994141 10.868 0.994141 11C0.994141 11.132 1.02028 11.2627 1.07105 11.3846C1.12182 11.5064 1.19621 11.617 1.28994 11.71C1.3829 11.8037 1.4935 11.8781 1.61536 11.9289C1.73722 11.9797 1.86793 12.0058 1.99994 12.0058C2.13195 12.0058 2.26266 11.9797 2.38452 11.9289C2.50638 11.8781 2.61698 11.8037 2.70994 11.71L10.9999 3.41V11C10.9999 11.2652 11.1053 11.5196 11.2928 11.7071C11.4804 11.8946 11.7347 12 11.9999 12C12.2652 12 12.5195 11.8946 12.707 11.7071C12.8946 11.5196 12.9999 11.2652 12.9999 11V1C12.9984 0.869323 12.9712 0.740222 12.9199 0.62Z" fill="#FF460C"></path>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+                
+      <div>
+        <section class="relative py-20 lg:py-32 overflow-hidden ">
+          <img class="absolute top-0 left-0" src="saturn-assets/images/features/star-left.png" alt="">
+          <div class="relative container px-4 mx-auto">
+            <div class="max-w-2xl mx-auto mb-20 text-center">
+              <h1 class="font-heading text-5xl xs:text-6xl md:text-7xl font-bold text-gray-900 mb-6">
+                <span>Why Choose</span>
+                <span class="font-serif italic">Us</span>
+                <span>?</span>
+              </h1>
+              <p class="max-w-md mx-auto text-lg text-gray-500">We guarantee exceptional quality and your satisfaction with every clean.</p>
+            </div>
+            <div class="max-w-7xl mx-auto px-8 py-18 xs:px-12 sm:p-24 bg-orange-50 rounded-4xl">
+              <div class="flex flex-wrap -mx-4">
+                <div class="w-full lg:w-1/2 px-4 order-last lg:order-first">
+                  <div class="lg:max-w-sm">
+                    <div class="flex items-center pb-12 mb-12 border-b border-gray-200 border-opacity-50">
+                      <div class="flex flex-shrink-0 w-15 h-15 mr-6 items-center justify-center bg-blue-100 rounded-full">
+                        <img src="images/cleaning-staff.png" alt="" width="35px" height="35px">
+                      </div>
+                      <div>
+                        <h3 class="text-xl font-semibold">Experienced Staff</h3>
+                        <span class="text-sm text-gray-400">Professional and Experienced staff ready to help you anytime.</span>
+                      </div>
+                    </div>
+                    <div class="flex items-center pb-12 mb-12 border-b border-gray-200 border-opacity-50">
+                      <div class="flex flex-shrink-0 w-15 h-20 mr-6 items-center justify-center bg-red-100 rounded-full">
+                        <img src="images/spray.png" alt="" width="35px" height="35px">
+                      </div>
+                      <div>
+                        <h3 class="text-xl font-semibold">Natural Products</h3>
+                        <span class="text-sm text-gray-400">We only use natural products in the process, No harmful chemicals are used.</span>
+                      </div>
+                    </div>
+                    <div class="flex items-center">
+                      <div class="flex flex-shrink-0 w-15 h-40 mr-6 items-center justify-center bg-yellow-300 rounded-full">
+                        <img src="saturn-assets/images/features/icon-plane.svg" alt="" width="35px" height="35px">
+                      </div>
+                      <div>
+                        <h3 class="text-xl font-semibold">Fast Service</h3>
+                        <span class="text-sm text-gray-400">Set your schedule and get the best and faster cleaning services everyday.</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-full lg:w-1/2 px-4 mb-20 lg:mb-0">
+                  <div class="flex flex-col h-full justify-between lg:max-w-md ml-auto">
+                    <div class="mb-12">
+                      <h3 class="text-3xl md:text-5xl font-bold mb-5">
+                        <span>Get a Quote</span>
+                        <span class="block">Now!</span>
+                      </h3>
+                      <p class="text-gray-900">We use the best and world class equipment for the cleaning process. Our advanced tools not only enhance cleaning effectiveness but also contribute to maintaining a healthier and more sanitized environment for your home or business.</p>
+                    </div>
+                    <div class="flex flex-wrap items-center justify-center">
+                      <a class="relative group inline-block w-full sm:w-auto py-4 px-6 text-orange-50 font-semibold bg-orange-900 rounded-full overflow-hidden" href="#">
+                        <div class="absolute top-0 right-full w-full h-full bg-gray-900 transform group-hover:translate-x-full group-hover:scale-102 transition duration-500"></div>
+                        <div class="relative flex items-center justify-center">
+                          <span class="mr-2">Get a Free Quote</span>
+                          <span>
+                            <svg width="13" height="13" viewbox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12.9199 0.62C12.8185 0.375651 12.6243 0.181475 12.3799 0.0799999C12.2597 0.028759 12.1306 0.00157999 11.9999 0H1.99994C1.73472 0 1.48037 0.105357 1.29283 0.292893C1.1053 0.48043 0.999939 0.734784 0.999939 1C0.999939 1.26522 1.1053 1.51957 1.29283 1.70711C1.48037 1.89464 1.73472 2 1.99994 2H9.58994L1.28994 10.29C1.19621 10.383 1.12182 10.4936 1.07105 10.6154C1.02028 10.7373 0.994141 10.868 0.994141 11C0.994141 11.132 1.02028 11.2627 1.07105 11.3846C1.12182 11.5064 1.19621 11.617 1.28994 11.71C1.3829 11.8037 1.4935 11.8781 1.61536 11.9289C1.73722 11.9797 1.86793 12.0058 1.99994 12.0058C2.13195 12.0058 2.26266 11.9797 2.38452 11.9289C2.50638 11.8781 2.61698 11.8037 2.70994 11.71L10.9999 3.41V11C10.9999 11.2652 11.1053 11.5196 11.2928 11.7071C11.4804 11.8946 11.7347 12 11.9999 12C12.2652 12 12.5195 11.8946 12.707 11.7071C12.8946 11.5196 12.9999 11.2652 12.9999 11V1C12.9984 0.869323 12.9712 0.740222 12.9199 0.62V0.62Z" fill="#FFF2EE"></path>
+                            </svg>
+                          </span>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+                
+      <section class="relative py-20 overflow-hidden bg-gray-50 ">
+        <img class="absolute top-0 left-0 mt-44" src="saturn-assets/images/faq/light-blue-left.png" alt="">
+        <img class="absolute top-0 right-0 mt-10" src="saturn-assets/images/faq/star-right.svg" alt="">
+        <div class="relative container px-4 mx-auto">
+          <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-24">
+              <span class="inline-block py-1 px-3 mb-4 text-xs font-semibold text-orange-900 bg-orange-50 rounded-full">FREQUENTLY ASKED QUESTIONS</span>
+              <h1 class="font-heading text-5xl xs:text-6xl md:text-7xl font-bold">
+                <span>You ask? We</span>
+                <span class="font-serif italic">answer</span>
+              </h1>
+            </div>
+            <div class="flex flex-wrap -mx-4">
+              <div class="w-full lg:w-1/2 px-4 mb-6 lg:mb-0">
+                <div class="px-8 py-10 mb-6 bg-white rounded-3xl shadow-lg">
+                  <div class="flex cursor-pointer group w-full items-start justify-between text-left" x-data="{ accordion: false }" x-on:click="accordion = !accordion">
+                    <div class="max-w-xl pr-5">
+                      <h3 class="text-xl font-semibold text-black" :class="accordion ? 'text-orange-900' : 'text-black'">How can I register for a service?</h3>
+                      <div x-ref="container" :style="accordion ? 'height: ' + $refs.container.scrollHeight + 'px' : ''" class="overflow-hidden h-0 duration-500" style="">
+                        <p class="text-lg text-gray-500 mt-3">You can register for a service by visiting our website and filling out the online booking form, or by contacting us directly via phone or WhatsApp.</p>
+                      </div>
+                    </div>
+                    <div>
+                      <span class="flex h-9 w-9 items-center justify-center rounded-full bg-orange-50 text-orange-900" :class="accordion ? 'bg-orange-900 text-orange-50' : 'bg-orange-50 text-orange-900'">
+                        <div :class="{ 'hidden': !accordion }" class="hidden">
+                          <svg width="17" height="3" viewbox="0 0 17 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.4619 0.045166H1.46194C1.19673 0.045166 0.942374 0.150523 0.754838 0.338059C0.567302 0.525596 0.461945 0.77995 0.461945 1.04517C0.461945 1.31038 0.567302 1.56474 0.754838 1.75227C0.942374 1.93981 1.19673 2.04517 1.46194 2.04517H15.4619C15.7272 2.04517 15.9815 1.93981 16.1691 1.75227C16.3566 1.56474 16.4619 1.31038 16.4619 1.04517C16.4619 0.77995 16.3566 0.525596 16.1691 0.338059C15.9815 0.150523 15.7272 0.045166 15.4619 0.045166Z" fill="currentColor"></path>
+                          </svg>
+                        </div>
+                        <div :class="{ 'hidden': accordion }">
+                          <svg width="14" height="14" viewbox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.8334 6.16671H7.83337V1.16671C7.83337 0.945694 7.74558 0.733732 7.5893 0.577452C7.43302 0.421172 7.22105 0.333374 7.00004 0.333374C6.77903 0.333374 6.56707 0.421172 6.41079 0.577452C6.2545 0.733732 6.16671 0.945694 6.16671 1.16671V6.16671H1.16671C0.945694 6.16671 0.733732 6.2545 0.577452 6.41079C0.421172 6.56707 0.333374 6.77903 0.333374 7.00004C0.333374 7.22105 0.421172 7.43302 0.577452 7.5893C0.733732 7.74558 0.945694 7.83337 1.16671 7.83337H6.16671V12.8334C6.16671 13.0544 6.2545 13.2663 6.41079 13.4226C6.56707 13.5789 6.77903 13.6667 7.00004 13.6667C7.22105 13.6667 7.43302 13.5789 7.5893 13.4226C7.74558 13.2663 7.83337 13.0544 7.83337 12.8334V7.83337H12.8334C13.0544 7.83337 13.2663 7.74558 13.4226 7.5893C13.5789 7.43302 13.6667 7.22105 13.6667 7.00004C13.6667 6.77903 13.5789 6.56707 13.4226 6.41079C13.2663 6.2545 13.0544 6.16671 12.8334 6.16671Z" fill="#FF460C"></path>
+                          </svg>
+                        </div>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="px-8 py-10 mb-6 bg-white rounded-3xl shadow-lg">
+                  <div class="flex cursor-pointer group w-full items-start justify-between text-left" x-data="{ accordion: false }" x-on:click="accordion = !accordion">
+                    <div class="max-w-xl pr-5">
+                      <h3 class="text-xl font-semibold text-black" :class="accordion ? 'text-orange-900' : 'text-black'">What if something is broken during clean?</h3>
+                      <div x-ref="container" :style="accordion ? 'height: ' + $refs.container.scrollHeight + 'px' : ''" class="overflow-hidden h-0 duration-500" style="">
+                        <p class="text-lg text-gray-500 mt-3">In the unlikely event that something is broken during the cleaning process, we will refund the cost of the item. However, our professional team takes great care to ensure this doesn't happen.</p>
+                      </div>
+                    </div>
+                    <div>
+                      <span class="flex h-9 w-9 items-center justify-center rounded-full bg-orange-50 text-orange-900" :class="accordion ? 'bg-orange-900 text-orange-50' : 'bg-orange-50 text-orange-900'">
+                        <div :class="{ 'hidden': !accordion }" class="hidden">
+                          <svg width="17" height="3" viewbox="0 0 17 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.4619 0.045166H1.46194C1.19673 0.045166 0.942374 0.150523 0.754838 0.338059C0.567302 0.525596 0.461945 0.77995 0.461945 1.04517C0.461945 1.31038 0.567302 1.56474 0.754838 1.75227C0.942374 1.93981 1.19673 2.04517 1.46194 2.04517H15.4619C15.7272 2.04517 15.9815 1.93981 16.1691 1.75227C16.3566 1.56474 16.4619 1.31038 16.4619 1.04517C16.4619 0.77995 16.3566 0.525596 16.1691 0.338059C15.9815 0.150523 15.7272 0.045166 15.4619 0.045166Z" fill="currentColor"></path>
+                          </svg>
+                        </div>
+                        <div :class="{ 'hidden': accordion }">
+                          <svg width="14" height="14" viewbox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.8334 6.16671H7.83337V1.16671C7.83337 0.945694 7.74558 0.733732 7.5893 0.577452C7.43302 0.421172 7.22105 0.333374 7.00004 0.333374C6.77903 0.333374 6.56707 0.421172 6.41079 0.577452C6.2545 0.733732 6.16671 0.945694 6.16671 1.16671V6.16671H1.16671C0.945694 6.16671 0.733732 6.2545 0.577452 6.41079C0.421172 6.56707 0.333374 6.77903 0.333374 7.00004C0.333374 7.22105 0.421172 7.43302 0.577452 7.5893C0.733732 7.74558 0.945694 7.83337 1.16671 7.83337H6.16671V12.8334C6.16671 13.0544 6.2545 13.2663 6.41079 13.4226C6.56707 13.5789 6.77903 13.6667 7.00004 13.6667C7.22105 13.6667 7.43302 13.5789 7.5893 13.4226C7.74558 13.2663 7.83337 13.0544 7.83337 12.8334V7.83337H12.8334C13.0544 7.83337 13.2663 7.74558 13.4226 7.5893C13.5789 7.43302 13.6667 7.22105 13.6667 7.00004C13.6667 6.77903 13.5789 6.56707 13.4226 6.41079C13.2663 6.2545 13.0544 6.16671 12.8334 6.16671Z" fill="#FF460C"></path>
+                          </svg>
+                        </div>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="w-full lg:w-1/2 px-4">
+                <div class="px-8 py-10 mb-6 bg-white rounded-3xl shadow-lg">
+                  <div class="flex cursor-pointer group w-full items-start justify-between text-left" x-data="{ accordion: false }" x-on:click="accordion = !accordion">
+                    <div class="max-w-xl pr-5">
+                      <h3 class="text-xl font-semibold text-black" :class="accordion ? 'text-orange-900' : 'text-black'">What if I don’t like the service?</h3>
+                      <div x-ref="container" :style="accordion ? 'height: ' + $refs.container.scrollHeight + 'px' : ''" class="overflow-hidden h-0 duration-500" style="">
+                        <p class="text-lg text-gray-500 mt-3">If you don’t like the service, please let us know immediately. We offer a satisfaction guarantee and will work to resolve any issues promptly, ensuring you're completely satisfied with the results.</p>
+                      </div>
+                    </div>
+                    <div>
+                      <span class="flex h-9 w-9 items-center justify-center rounded-full bg-orange-50 text-orange-900" :class="accordion ? 'bg-orange-900 text-orange-50' : 'bg-orange-50 text-orange-900'">
+                        <div :class="{ 'hidden': !accordion }" class="hidden">
+                          <svg width="17" height="3" viewbox="0 0 17 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.4619 0.045166H1.46194C1.19673 0.045166 0.942374 0.150523 0.754838 0.338059C0.567302 0.525596 0.461945 0.77995 0.461945 1.04517C0.461945 1.31038 0.567302 1.56474 0.754838 1.75227C0.942374 1.93981 1.19673 2.04517 1.46194 2.04517H15.4619C15.7272 2.04517 15.9815 1.93981 16.1691 1.75227C16.3566 1.56474 16.4619 1.31038 16.4619 1.04517C16.4619 0.77995 16.3566 0.525596 16.1691 0.338059C15.9815 0.150523 15.7272 0.045166 15.4619 0.045166Z" fill="currentColor"></path>
+                          </svg>
+                        </div>
+                        <div :class="{ 'hidden': accordion }">
+                          <svg width="14" height="14" viewbox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.8334 6.16671H7.83337V1.16671C7.83337 0.945694 7.74558 0.733732 7.5893 0.577452C7.43302 0.421172 7.22105 0.333374 7.00004 0.333374C6.77903 0.333374 6.56707 0.421172 6.41079 0.577452C6.2545 0.733732 6.16671 0.945694 6.16671 1.16671V6.16671H1.16671C0.945694 6.16671 0.733732 6.2545 0.577452 6.41079C0.421172 6.56707 0.333374 6.77903 0.333374 7.00004C0.333374 7.22105 0.421172 7.43302 0.577452 7.5893C0.733732 7.74558 0.945694 7.83337 1.16671 7.83337H6.16671V12.8334C6.16671 13.0544 6.2545 13.2663 6.41079 13.4226C6.56707 13.5789 6.77903 13.6667 7.00004 13.6667C7.22105 13.6667 7.43302 13.5789 7.5893 13.4226C7.74558 13.2663 7.83337 13.0544 7.83337 12.8334V7.83337H12.8334C13.0544 7.83337 13.2663 7.74558 13.4226 7.5893C13.5789 7.43302 13.6667 7.22105 13.6667 7.00004C13.6667 6.77903 13.5789 6.56707 13.4226 6.41079C13.2663 6.2545 13.0544 6.16671 12.8334 6.16671Z" fill="#FF460C"></path>
+                          </svg>
+                        </div>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="px-8 py-10 bg-white rounded-3xl shadow-lg">
+                  <div class="flex cursor-pointer group w-full items-start justify-between text-left" x-data="{ accordion: false }" x-on:click="accordion = !accordion">
+                    <div class="max-w-xl pr-5">
+                      <h3 class="text-xl font-semibold text-black" :class="accordion ? 'text-orange-900' : 'text-black'">Can I adjust the schedule for cleaning?</h3>
+                      <div x-ref="container" :style="accordion ? 'height: ' + $refs.container.scrollHeight + 'px' : ''" class="overflow-hidden h-0 duration-500" style="">
+                        <p class="text-lg text-gray-500 mt-3">Yes, you can adjust the schedule for cleaning. Just let us know your preferred time, and we’ll do our best to accommodate your request.</p>
+                      </div>
+                    </div>
+                    <div>
+                      <span class="flex h-9 w-9 items-center justify-center rounded-full bg-orange-50 text-orange-900" :class="accordion ? 'bg-orange-900 text-orange-50' : 'bg-orange-50 text-orange-900'">
+                        <div :class="{ 'hidden': !accordion }" class="hidden">
+                          <svg width="17" height="3" viewbox="0 0 17 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.4619 0.045166H1.46194C1.19673 0.045166 0.942374 0.150523 0.754838 0.338059C0.567302 0.525596 0.461945 0.77995 0.461945 1.04517C0.461945 1.31038 0.567302 1.56474 0.754838 1.75227C0.942374 1.93981 1.19673 2.04517 1.46194 2.04517H15.4619C15.7272 2.04517 15.9815 1.93981 16.1691 1.75227C16.3566 1.56474 16.4619 1.31038 16.4619 1.04517C16.4619 0.77995 16.3566 0.525596 16.1691 0.338059C15.9815 0.150523 15.7272 0.045166 15.4619 0.045166Z" fill="currentColor"></path>
+                          </svg>
+                        </div>
+                        <div :class="{ 'hidden': accordion }">
+                          <svg width="14" height="14" viewbox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.8334 6.16671H7.83337V1.16671C7.83337 0.945694 7.74558 0.733732 7.5893 0.577452C7.43302 0.421172 7.22105 0.333374 7.00004 0.333374C6.77903 0.333374 6.56707 0.421172 6.41079 0.577452C6.2545 0.733732 6.16671 0.945694 6.16671 1.16671V6.16671H1.16671C0.945694 6.16671 0.733732 6.2545 0.577452 6.41079C0.421172 6.56707 0.333374 6.77903 0.333374 7.00004C0.333374 7.22105 0.421172 7.43302 0.577452 7.5893C0.733732 7.74558 0.945694 7.83337 1.16671 7.83337H6.16671V12.8334C6.16671 13.0544 6.2545 13.2663 6.41079 13.4226C6.56707 13.5789 6.77903 13.6667 7.00004 13.6667C7.22105 13.6667 7.43302 13.5789 7.5893 13.4226C7.74558 13.2663 7.83337 13.0544 7.83337 12.8334V7.83337H12.8334C13.0544 7.83337 13.2663 7.74558 13.4226 7.5893C13.5789 7.43302 13.6667 7.22105 13.6667 7.00004C13.6667 6.77903 13.5789 6.56707 13.4226 6.41079C13.2663 6.2545 13.0544 6.16671 12.8334 6.16671Z" fill="#FF460C"></path>
+                          </svg>
+                        </div>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+                
+      <section class="py-20 md:py-24">
+        <div class="container px-4 mx-auto">
+          <div class="relative max-w-7xl mx-auto px-6 md:px-12 py-16 sm:py-28 rounded-4xl bg-orange-800 overflow-hidden">
+            <img class="absolute top-0 left-1/2 transform -translate-x-1/2 h-full object-cover" src="saturn-assets/images/cta/circle-bg.svg" alt="">
+            <div class="relative text-center">
+              <span class="block text-2xl sm:text-3xl md:text-4xl font-semibold text-orange-400 mb-6">Ready to start?</span>
+              <h2 class="font-heading text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-8">
+                <span>Transform Your Space</span>
+                <span class="font-serif italic">today!</span>
+              </h2>
+              <a class="relative group inline-block w-full sm:w-auto py-4 px-6 text-orange-900 hover:text-white font-semibold bg-white rounded-md overflow-hidden transition duration-300" href="#">
+                <div class="absolute top-0 right-full w-full h-full bg-gray-900 transform group-hover:translate-x-full group-hover:scale-110 transition duration-500"></div>
+                <div class="relative flex items-center justify-center">
+                  <span class="mr-4">Get a Free Quote</span>
+                  <span>
+                    <svg width="8" height="12" viewbox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.83 5.28999L2.59 1.04999C2.49704 0.956266 2.38644 0.881872 2.26458 0.831103C2.14272 0.780334 2.01202 0.754196 1.88 0.754196C1.74799 0.754196 1.61729 0.780334 1.49543 0.831103C1.37357 0.881872 1.26297 0.956266 1.17 1.04999C0.983753 1.23736 0.879211 1.49081 0.879211 1.75499C0.879211 2.01918 0.983753 2.27263 1.17 2.45999L4.71 5.99999L1.17 9.53999C0.983753 9.72736 0.879211 9.98081 0.879211 10.245C0.879211 10.5092 0.983753 10.7626 1.17 10.95C1.26344 11.0427 1.37426 11.116 1.4961 11.1658C1.61794 11.2155 1.7484 11.2408 1.88 11.24C2.01161 11.2408 2.14207 11.2155 2.26391 11.1658C2.38575 11.116 2.49656 11.0427 2.59 10.95L6.83 6.70999C6.92373 6.61703 6.99813 6.50643 7.04889 6.38457C7.09966 6.26271 7.1258 6.13201 7.1258 5.99999C7.1258 5.86798 7.09966 5.73728 7.04889 5.61542C6.99813 5.49356 6.92373 5.38296 6.83 5.28999Z" fill="currentColor"></path>
+                    </svg>
+                  </span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+                
+      <section class="relative py-20 md:py-32 overflow-hidden " id="contact">
+        <img class="absolute top-0 left-0 md:mt-24" src="saturn-assets/images/contact/dots-side-1.svg" alt="">
+        <img class="absolute bottom-0 right-0 mb-8 lg:mb-24" src="saturn-assets/images/contact/dots-side-2.svg" alt="">
+        <div class="relative container px-4 mx-auto">
+          <div class="max-w-2xl mx-auto mb-18 text-center">
+            <span class="inline-block py-1 px-3 mb-4 text-xs font-semibold text-orange-900 bg-orange-50 rounded-full">READY TO SUPPORT</span>
+            <h1 class="font-heading text-5xl xs:text-6xl font-bold text-gray-900 mb-4">
+              <span>Anything unclear or</span>
+              <span class="font-serif italic">need help</span>
+              <span>?</span>
+            </h1>
+            <p class="text-xl text-gray-500 font-semibold">We are ready to support 24/7 for you</p>
+          </div>
+          <div class="flex flex-wrap justify-center -mx-4">
+            <div class="w-full md:w-1/2 lg:w-auto px-4 xl:px-10 mb-10 md:mb-0">
+              <div class="max-w-sm mx-auto h-full py-8 px-6 bg-white border border-gray-200 rounded-5xl">
+                <div class="max-w-2xs mx-auto text-center">
+                  <img class="block mx-auto mb-3" src="saturn-assets/images/contact/icon-orange-email.svg" alt="">
+                  <h5 class="text-2xl font-bold text-gray-900 mb-3">Contact Us</h5>
+                  <p class="text-gray-500 mb-9">Have a question or need more information? Send us a message on WhatsApp for quick and easy assistance.</p>
+                  <a class="relative group inline-block py-4 px-6 text-white font-semibold bg-orange-900 rounded-full overflow-hidden" href="#">
+                    <div class="absolute top-0 right-full w-full h-full bg-gray-900 transform group-hover:translate-x-full group-hover:scale-102 transition duration-500 " ></div>
+                    <div class="relative flex items-center justify-center">
+                      <span class="mr-4">Contact</span>
+                      <span>
+                        <svg width="8" height="12" viewbox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.83 5.28999L2.59 1.04999C2.49704 0.956266 2.38644 0.881872 2.26458 0.831103C2.14272 0.780334 2.01202 0.754196 1.88 0.754196C1.74799 0.754196 1.61729 0.780334 1.49543 0.831103C1.37357 0.881872 1.26297 0.956266 1.17 1.04999C0.983753 1.23736 0.879211 1.49081 0.879211 1.75499C0.879211 2.01918 0.983753 2.27263 1.17 2.45999L4.71 5.99999L1.17 9.53999C0.983753 9.72736 0.879211 9.98081 0.879211 10.245C0.879211 10.5092 0.983753 10.7626 1.17 10.95C1.26344 11.0427 1.37426 11.116 1.4961 11.1658C1.61794 11.2155 1.7484 11.2408 1.88 11.24C2.01161 11.2408 2.14207 11.2155 2.26391 11.1658C2.38575 11.116 2.49656 11.0427 2.59 10.95L6.83 6.70999C6.92373 6.61703 6.99813 6.50643 7.04889 6.38457C7.09966 6.26271 7.1258 6.13201 7.1258 5.99999C7.1258 5.86798 7.09966 5.73728 7.04889 5.61542C6.99813 5.49356 6.92373 5.38296 6.83 5.28999Z" fill="#FAFBFC"></path>
+                        </svg>
+                      </span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-auto px-4 xl:px-10">
+              <div class="max-w-sm mx-auto h-full py-8 px-6 bg-white border border-gray-200 rounded-5xl">
+                <div class="max-w-2xs mx-auto text-center">
+                  <img class="block mx-auto mb-3" src="saturn-assets/images/contact/icon-orange-headphones.svg" alt="">
+                  <h5 class="text-2xl font-bold text-gray-900 mb-3">Customer Service</h5>
+                  <p class="text-gray-500 mb-3">our customer support team is here to ensure your experience with us is seamless and satisfying</p>
+                  <span class="block text-sm text-orange-900 mb-8">+1234-567890</span>
+                  <a class="relative group inline-block py-4 px-6 text-white font-semibold bg-orange-900 rounded-full overflow-hidden" href="#">
+                    <div class="absolute top-0 right-full w-full h-full bg-gray-900 transform group-hover:translate-x-full group-hover:scale-102 transition duration-500"></div>
+                    <div class="relative flex items-center justify-center">
+                      <span class="mr-4">Call Now</span>
+                      <span>
+                        <svg width="21" height="20" viewbox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.94 11C17.72 11 17.49 10.93 17.27 10.88C16.8245 10.7818 16.3867 10.6515 15.96 10.49C15.4961 10.3212 14.9861 10.33 14.5283 10.5146C14.0705 10.6992 13.6971 11.0466 13.48 11.49L13.26 11.94C12.286 11.3982 11.391 10.7252 10.6 9.93999C9.81476 9.14901 9.14182 8.25399 8.59999 7.27999L9.01999 6.99999C9.46336 6.78291 9.81078 6.40952 9.99539 5.95168C10.18 5.49384 10.1888 4.9839 10.02 4.51999C9.86122 4.09241 9.73093 3.65479 9.62999 3.20999C9.57999 2.98999 9.53999 2.75999 9.50999 2.52999C9.38856 1.82561 9.01962 1.18773 8.46962 0.731229C7.91961 0.274727 7.22469 0.029599 6.50999 0.0399902H3.50999C3.07903 0.0359436 2.65224 0.124804 2.2587 0.300521C1.86516 0.476238 1.5141 0.734686 1.22942 1.05827C0.944745 1.38186 0.733129 1.76298 0.608982 2.1757C0.484835 2.58842 0.451073 3.02305 0.509994 3.44999C1.04273 7.63937 2.95602 11.5319 5.94765 14.5126C8.93927 17.4934 12.8387 19.3925 17.03 19.91H17.41C18.1474 19.9111 18.8594 19.6405 19.41 19.15C19.7264 18.867 19.9791 18.5202 20.1515 18.1323C20.3238 17.7444 20.412 17.3244 20.41 16.9V13.9C20.3977 13.2054 20.1448 12.5365 19.6943 12.0077C19.2439 11.4788 18.6238 11.1226 17.94 11V11ZM18.44 17C18.4398 17.142 18.4094 17.2823 18.3508 17.4116C18.2922 17.5409 18.2067 17.6563 18.1 17.75C17.9904 17.8498 17.86 17.9241 17.7181 17.9673C17.5763 18.0106 17.4267 18.0217 17.28 18C13.5349 17.5198 10.0562 15.8065 7.39271 13.1303C4.72919 10.4541 3.0324 6.96733 2.56999 3.21999C2.55408 3.07351 2.56803 2.92532 2.611 2.78438C2.65397 2.64344 2.72506 2.51268 2.81999 2.39999C2.9137 2.29332 3.02906 2.20783 3.15837 2.14921C3.28769 2.09058 3.42801 2.06017 3.56999 2.05999H6.56999C6.80254 2.05482 7.02962 2.13087 7.21214 2.27506C7.39466 2.41925 7.5212 2.62256 7.56999 2.84999C7.60999 3.12332 7.65999 3.39332 7.71999 3.65999C7.83551 4.18713 7.98925 4.70517 8.17999 5.20999L6.77999 5.85999C6.66029 5.91491 6.55262 5.99294 6.46315 6.08959C6.37369 6.18624 6.30419 6.2996 6.25867 6.42318C6.21314 6.54677 6.19247 6.67812 6.19784 6.80971C6.20322 6.9413 6.23453 7.07054 6.28999 7.18999C7.72919 10.2727 10.2072 12.7508 13.29 14.19C13.5335 14.29 13.8065 14.29 14.05 14.19C14.1747 14.1454 14.2893 14.0764 14.3872 13.9872C14.485 13.8979 14.5642 13.7901 14.62 13.67L15.24 12.27C15.757 12.4549 16.2846 12.6085 16.82 12.73C17.0867 12.79 17.3567 12.84 17.63 12.88C17.8574 12.9288 18.0607 13.0553 18.2049 13.2378C18.3491 13.4204 18.4252 13.6474 18.42 13.88L18.44 17ZM17.5 7.99999C17.7652 7.99999 18.0196 7.89463 18.2071 7.7071C18.3946 7.51956 18.5 7.26521 18.5 6.99999V2.99999C18.5 2.73477 18.3946 2.48042 18.2071 2.29288C18.0196 2.10535 17.7652 1.99999 17.5 1.99999C17.2348 1.99999 16.9804 2.10535 16.7929 2.29288C16.6054 2.48042 16.5 2.73477 16.5 2.99999V6.99999C16.5 7.26521 16.6054 7.51956 16.7929 7.7071C16.9804 7.89463 17.2348 7.99999 17.5 7.99999ZM13.5 7.99999C13.7652 7.99999 14.0196 7.89463 14.2071 7.7071C14.3946 7.51956 14.5 7.26521 14.5 6.99999V2.99999C14.5 2.73477 14.3946 2.48042 14.2071 2.29288C14.0196 2.10535 13.7652 1.99999 13.5 1.99999C13.2348 1.99999 12.9804 2.10535 12.7929 2.29288C12.6054 2.48042 12.5 2.73477 12.5 2.99999V6.99999C12.5 7.26521 12.6054 7.51956 12.7929 7.7071C12.9804 7.89463 13.2348 7.99999 13.5 7.99999Z" fill="currentColor"></path>
+                        </svg>
+                      </span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+                
+
+        <section class="py-20 bg-gray-900">
+          <div class="container px-4 mx-auto">
+            <div class="max-w-7xl mx-auto mb-15">
+              <div class="pb-8 mb-15 border-b border-gray-700 items-center">
+                <div class="flex flex-wrap mx-4 items-center">
+                  <div class="w-full lg:w-1/2 px-4 mb-4 lg:mb-0">
+                    <a class="inline-block" href="#">
+                      <img class="h-15" src="saturn-assets/logos/logo-saturn-light.svg" alt="">
+                    </a>
+                  </div>
+                  <div class="w-full lg:w-1/2 px-4">
+                    <div class="sm:flex mb-4 items-center lg:justify-end">
+                      <span class="inline-block text-white mb-4 mr-8">Ready to start?</span>
+                      <a class="relative group inline-block w-full sm:w-auto py-3 px-5 mb-4 text-center text-sm font-semibold text-orange-50 hover:text-orange-900 bg-orange-900 rounded-md overflow-hidden transition duration-300" href="#">
+                        <div class="absolute top-0 right-full w-full h-full bg-white transform group-hover:translate-x-full group-hover:scale-105 transition duration-500"></div>
+                        <span class="relative">Get a Free Quote</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-wrap mb-5 lg:-mx-6 items-center justify-center mt-10">
+                <div class="px-6 mb-5"><a class="inline-block text-gray-300 hover:text-gray-200" href="#">Home</a></div>
+                <div class="px-6 mb-5"><a class="inline-block text-gray-300 hover:text-gray-200" href="#">Services</a></div>
+                <div class="px-6 mb-5"><a class="inline-block text-gray-300 hover:text-gray-200" href="#">Contact us</a></div>
+                <div class="px-6 mb-5"><a class="inline-block text-gray-300 hover:text-gray-200" href="#">Support</a></div>
+                <div class="px-6 mb-5"><a class="inline-block text-gray-300 hover:text-gray-200" href="#">Privacy</a></div>
+              </div>
+              <div class="mt-15 text-center">
+                <span class="text-gray-500">© 2023 saturn. All rights reserved.</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+</body>
+</html>
+
