@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Page title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,500;1,600;1,700&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/tailwind/tailwind.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="shuffle-for-tailwind.png">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js" defer></script>
+</head>
+<body class="antialiased bg-body text-body font-body">
+    <div class="">
+      <div>
+        <div>
+          <div>
+            <section x-data="{ mobileNavOpen: false }" class="relative pb-24 bg-gray-900 overflow-hidden">
+              <nav class="relative py-6 mb-20 sm:mb-32 bg-white" style=" position: fixed;top: 0; overflow: hidden; width: 100%; z-index: 99;"> 
+                <div class="container px-4 mx-auto">
+                  <div class="flex items-center">
+                    <a class="inline-block text-lg font-bold" href="#">
+                      <img class="h-10" src="saturn-assets/logos/logo-saturn-dark.svg" alt="" width="auto">
+                    </a>
+                    <div class="lg:hidden ml-auto">
+                      <button x-on:click="mobileNavOpen = !mobileNavOpen" class="flex w-12 h-12 items-center justify-center bg-gray-100 hover:bg-gray-200 rounded-md transition duration-200">
+                        <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M3 12H21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                          <path d="M3 6H21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                          <path d="M3 18H21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </button>
+                    </div>
+                    <ul class="hidden lg:flex ml-14 lg:w-auto lg:space-x-12">
+                      <li><a class="inline-block text-sm text-gray-900 hover:text-orange-900 font-medium" href="home.html#">Inicio</a></li>
+                      <li><a class="inline-block text-sm text-gray-900 hover:text-orange-900 font-medium" href="home.html#services">Servicios</a></li>
+                      <li><a class="inline-block text-sm text-gray-900 hover:text-orange-900 font-medium" href="home.html#contact">Contacto</a></li>
+                    </ul>
+                    <div class="hidden lg:block ml-auto">
+                      <div class="flex items-center">
+                        <a class="inline-block mr-9 text-sm font-semibold text-orange-900 hover:text-gray-900" href="tel:0687626560">0687626560</a>
+                        <a class="relative group inline-block py-3 px-4 text-sm font-semibold text-orange-900 hover:text-white border border-gray-200 rounded-md overflow-hidden transition duration-300" href="https://wa.me/212681206631" target="_blank">
+                          <div class="absolute top-0 right-full w-full h-full bg-orange-900 transform group-hover:translate-x-full group-hover:scale-102 transition duration-500"></div>
+                          <span class="relative">Obtenga una cuota gratis</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+
+              <div :class="{'block': mobileNavOpen, 'hidden': !mobileNavOpen}" class="fixed top-0 left-0 bottom-0 w-5/6 max-w-md z-50 block">
+                <div x-on:click="mobileNavOpen = !mobileNavOpen" class="fixed inset-0 bg-gray-800 opacity-25"></div>
+                <nav class="relative flex flex-col py-6 px-10 w-full h-full bg-white border-r overflow-y-auto">
+                  <div class="flex items-center mb-16">
+                    <a class="mr-auto text-2xl font-medium leading-none" href="#">
+                      <img class="h-10" src="saturn-assets/logos/logo-saturn-dark.svg" alt="" width="auto">
+                    </a>
+                    <button x-on:click="mobileNavOpen = !mobileNavOpen">
+                      <svg class="h-6 w-6 text-gray-500 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                      </svg>
+                    </button>
+                  </div>
+                  <div>
+                    <ul class="mb-2">
+                      <li><a class="block py-4 px-5 text-gray-900 hover:bg-orange-50 rounded-lg" href="home.html#">Inicio</a></li>
+                      <li><a class="block py-4 px-5 text-gray-900 hover:bg-orange-50 rounded-lg" href="home.html#services">Servicios</a></li>
+                      <li><a class="block py-4 px-5 text-gray-900 hover:bg-orange-50 rounded-lg" href="home.html#contact">Contacto</a></li>
+                    </ul>
+                    <div class="py-8 px-6 mb-6 border-t border-b border-gray-200">
+                      <a class="flex items-center text-sm font-semibold text-orange-900 hover:text-orange-600" href="tel:0687626560">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewbox="0 0 16 16">
+                          <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"></path>
+                        </svg>
+                        <span class="ml-3" >0687626560</span>
+                      </a>
+                    </div>
+                    <div class="flex px-6 mb-16 items-center"><a class="inline-block py-3 px-4 text-sm font-semibold text-orange-900 hover:text-white border border-gray-300 hover:border-orange-600 hover:bg-orange-900 rounded-md transition duration-200" href="https://wa.me/212681206631" target="_blank">Obtenga una cuota gratis</a></div>
+                  </div>
+                </nav>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>          
+      <section class="relative pt-20 lg:pt-24 overflow-hidden " style="margin-top: 100px; margin-bottom: 100px;">
+        <img class="absolute bottom-0 left-0" src="saturn-assets/images/content/light-blue-left.png" alt="">
+        <div class="relative container px-4 mx-auto">
+          <div class="max-w-7xl mx-auto">
+            <div class="flex flex-wrap -mx-4">
+              <div class="w-full lg:w-1/2 px-4 mb-12 lg:mb-0">
+                <div class="max-w-md md:max-w-lg mx-auto lg:mx-0">
+                  <span class="inline-block py-1 px-3 mb-4 text-xs font-semibold text-orange-900 bg-orange-50 rounded-full">POLÍTICA DE PRIVACIDAD</span>
+                  <h1 class="font-heading text-4xl xs:text-6xl md:text-7xl font-bold text-gray-900 mb-12">
+                    <span class="block">Nuestra Política</span>
+         
+                    <span class="block font-serif italic">de Privacidad</span>
+                  </h1>
+                  <p class="max-w-md text-gray-400 mb-6">Bienvenido a la Política de Privacidad de Saturnx Cleaning Services. Tu privacidad es de suma importancia para nosotros, y estamos comprometidos a salvaguardar la información que nos confías. Esta Política de Privacidad describe cómo recopilamos, utilizamos, divulgamos y protegemos tu información cuando visitas nuestro sitio web saturnx.es o utilizas nuestros servicios de limpieza. Por favor, revisa esta política detenidamente para entender nuestras prácticas con respecto a tus datos personales y cómo los gestionamos.</p>
+                </div>
+              </div>
+              <div class="w-full lg:w-1/2 px-4">
+                <div class="max-w-md md:max-w-lg mx-auto lg:mr-0">
+                  <h3 class="text-xl font-semibold text-gray-800 mb-6">Recopilación de Información</h3>
+                  <p class="text-lg text-gray-700 mb-5">Cuando interactúas con nosotros, podemos recopilar y procesar los siguientes tipos de información: Información de Identificación Personal (como tu nombre, dirección de correo electrónico, número de teléfono y dirección postal), Información de Pago (detalles de tarjeta de crédito u otra información de pago necesaria para procesar transacciones), Comunicaciones (correspondencia contigo, incluyendo consultas y solicitudes de servicio), y Datos de Uso del Sitio Web (información sobre tu interacción con nuestro sitio web, incluyendo direcciones IP, tipos de navegadores, páginas visitadas y tiempo pasado en nuestro sitio).</p>
+                  <h3 class="text-xl font-semibold text-gray-800 mb-6">Uso de la Información</h3>
+                  <p class="text-lg text-gray-700 mb-5">Utilizamos la información que recopilamos para los siguientes propósitos: Provisión de Servicio (para ofrecer y mantener nuestros servicios de limpieza para usted), Soporte al Cliente (para responder a sus consultas, solicitudes y brindar asistencia), Mejora (para mejorar nuestros servicios, optimizar nuestro sitio web y personalizar su experiencia), y Marketing (con su consentimiento, para enviar materiales promocionales, boletines o actualizaciones que puedan interesarle).</p>
+                  <h3 class="text-xl font-semibold text-gray-800 mb-6">Compartir Información</h3>
+                  <p class="text-lg text-gray-700 mb-5">No vendemos tu información personal a terceros. Podemos compartir tu información con: Proveedores de Servicios (proveedores externos que nos ayudan a operar nuestro negocio y brindarte servicios), Cumplimiento Legal (cuando sea requerido por ley o para proteger nuestros derechos, propiedad o seguridad), y Transferencias Comerciales (en relación con una fusión, adquisición o venta de activos, tu información puede ser transferida).</p>
+                  <h3 class="text-xl font-semibold text-gray-800 mb-6">Seguridad de Datos</h3>
+                  <p class="text-lg text-gray-700 mb-5">Implementamos medidas de seguridad para proteger tus datos personales contra accesos no autorizados, alteraciones, divulgaciones o destrucciones. Aunque nos esforzamos por salvaguardar tu información, no podemos garantizar seguridad absoluta debido a los riesgos inherentes a la transmisión de datos por internet.</p>
+                  <h3 class="text-xl font-semibold text-gray-800 mb-6">Tus Derechos</h3>
+                  <p class="text-lg text-gray-700 mb-5">Tienes derechos sobre tus datos personales, incluyendo: Acceso y Control (acceder, corregir, actualizar o eliminar tu información personal), Portabilidad de Datos (solicitar una copia de tus datos en un formato estructurado y de uso común), y Oposición al Tratamiento (oponerte al tratamiento de tus datos en ciertas circunstancias).</p>
+                  <h3 class="text-xl font-semibold text-gray-800 mb-6">Privacidad Infantil</h3>
+                  <p class="text-lg text-gray-700 mb-5">Nuestros servicios no están destinados a niños menores de 18 años. No recopilamos conscientemente información personal de menores. Si descubrimos que hemos recopilado datos de un niño por error, tomaremos medidas para eliminarlo rápidamente.</p>
+                  <h3 class="text-xl font-semibold text-gray-800 mb-6">Cambios en esta política</h3>
+                  <p class="text-lg text-gray-700 mb-5">Podemos actualizar periódicamente esta Política de Privacidad para reflejar cambios en nuestras prácticas o requisitos legales. Le notificaremos cualquier actualización importante publicando la política revisada en nuestro sitio web con una fecha efectiva.</p>
+                  <h3 class="text-xl font-semibold text-gray-800 mb-6">Contacto</h3>
+                  <p class="text-lg text-gray-700 mb-5">Si tienes preguntas o preocupaciones sobre nuestra Política de Privacidad o cómo gestionamos tu información personal, por favor contáctanos: Email: [Tu dirección de correo electrónico], Dirección: [Tu dirección de negocio], Teléfono: [Tu número de teléfono]. Esta Política de Privacidad fue actualizada por última vez el [Fecha]. Gracias por confiar en los Servicios de Limpieza Saturnx con tu privacidad.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-20 bg-gray-900">
+        <div class="container px-4 mx-auto">
+          <div class="max-w-7xl mx-auto">
+            <div class="pb-8 mb-15  items-center">
+              <div class="flex flex-wrap -mx-4 items-center">
+                <div class="w-full lg:w-1/2 px-4 mb-4 lg:mb-0">
+                  <a class="inline-block" href="#">
+                    <img class="h-15" src="saturn-assets/logos/logo-saturn-light.svg" alt="">
+                  </a>
+                </div>
+                <div class="w-full lg:w-1/2 px-4">
+                  <div class="sm:flex -mb-4 items-center lg:justify-end">
+                    <span class="inline-block text-white mb-4 mr-8">Ready to start?</span>
+                    <a class="relative group inline-block w-full sm:w-auto py-3 px-5 mb-4 text-center text-sm font-semibold text-orange-50 hover:text-orange-900 bg-orange-900 rounded-md overflow-hidden transition duration-300"  href="https://wa.me/212681206631" target="_blank">
+                      <div class="absolute top-0 right-full w-full h-full bg-white transform group-hover:translate-x-full group-hover:scale-105 transition duration-500"></div>
+                      <span class="relative">Get a Free Quote</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-wrap  mb-15 lg:-mx-6 items-center justify-center">
+              <div class="px-6 mb-5"><a class="inline-block text-gray-300 hover:text-gray-200" href="home.html#">Home</a></div>
+              <div class="px-6 mb-5"><a class="inline-block text-gray-300 hover:text-gray-200" href="home.html#services">Services</a></div>
+              <div class="px-6 mb-5"><a class="inline-block text-gray-300 hover:text-gray-200" href="home.html#contact">Contact us</a></div>
+              <div class="px-6 mb-5"><a class="inline-block text-gray-300 hover:text-gray-200" href="https://wa.me/212681206631" target="_blank">Support</a></div>
+              <div class="px-6 mb-5"><a class="inline-block text-gray-300 hover:text-gray-200" href="privacy-policy.html" target="_blank">Privacy</a></div>
+            </div>
+            <div class="mt-15 text-center">
+              <span class="text-gray-500">© 2023 saturn. All rights reserved.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+</body>
+</html>
+
